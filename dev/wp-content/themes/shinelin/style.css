@@ -1,0 +1,519 @@
+/*
+Theme Name: ShineLin Website
+Author: ShineLin
+Description: The official website for me
+Version: 1.0
+*/
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    margin: 0; 
+  }
+  
+  input, textarea{
+      height: 60px;
+      padding:16px 16px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 20px;
+      border: none;
+      box-shadow: inset 8px 3px 18px -4 px rgba(0,0,0,0.4);
+  }
+  
+  input:focus,
+  textarea:focus{
+      outline: none;
+  }
+  
+  a{
+      text-decoration: none;
+  }
+  
+  a:hover{
+      text-decoration: underline;
+  }
+  
+  h1{
+      padding: 8px;
+      background: red;
+      border-radius: 8px;
+      margin: 0px;
+      font-size: 64px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  p{
+      line-height: 1.5;
+  }
+  
+  main{
+      margin: 0 auto;
+  }
+  
+  #banner{
+      height:100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.2);
+      background-image: url('img/banner.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-blend-mode: darken;
+      color: white;
+  }
+  
+  #banner h3{
+      background: black;
+      border-radius: 8px;
+      padding: 0 24px;
+      color: white;
+  }
+  
+  #searchbox{
+      position: fixed;
+      right: 0px;
+      top: 24px;
+      width: 500px;
+      pointer-events: none;
+      z-index: 50;
+      transition:0.4s;
+  }
+  
+  #searchbox input{
+      height: 48px;
+      width: 100%;
+  }
+  
+  #searchbox #search-btn,
+  #slideout-menu #search-btn{
+      height:48px;
+      width:48px;
+      background: white url('img/search-icon.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top:0;
+      right:0;
+      box-shadow: initial;
+      transition:0.4s;
+      cursor: pointer;
+      border: 1px solid #ddd;
+
+  }
+
+  #searchbox #search-btn:hover,
+  #slideout-menu #search-btn:hover{
+    background: red url('img/search-icon.png');
+
+  }
+
+  nav{
+      height: 72px;
+      background: #202125;
+      display: flex;
+      width: 100%;
+      font-size: 20px;
+      margin:0;
+      justify-content: space-between;
+      padding: 0 16px 0 0;
+      box-sizing: border-box;
+      position: fixed;
+      z-index: 100;
+  }
+  
+  nav a{
+      padding: 0 32px;
+      color: #eee;
+      transition:0.4s;
+  }
+  
+  nav a:hover{
+      text-decoration: none;
+      color: red;
+  }
+  
+  nav ul{
+      display: flex;
+      list-style:none;
+      justify-content: space-around;
+      align-items: center;
+      height:100%;
+      margin:0;
+  }
+  
+  #logo-img{
+      display: flex;
+      height: 100%;
+      background: #111;
+      padding: 0 32px;
+      justify-content: center;
+      align-items: center;
+  }
+  #logo-img img{
+      height: 75px;
+  }
+  
+  #logo-img:hover{
+      background: black;
+  }
+  
+  #menu-icon{
+      display: none;
+      color:white;
+      font-size: 28px;
+      align-items: center;
+      justify-content: right;
+      padding:0 4px;
+  }
+  
+  #search-icon{
+      color: white;
+      cursor:pointer;
+      padding: 0 32px;
+      transition: 0.4s;
+  }
+  
+  #search-icon:hover{
+      color:red
+  }
+  
+  #slideout-menu{
+      text-align: center;
+      transition:0.4s;
+      margin-top: 72px;
+      position: fixed;
+      z-index: 100;
+      background: #2d3436;
+      width:100%;
+      display: none;
+  }
+
+  #slidout-menu form{
+      position: relative;
+  }
+  #slideout-menu ul{
+      padding: 0 32px;
+  }
+  
+  #slideout-menu ul li{
+      padding:8px;
+  }
+  
+  #slideout-menu a{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 20px;
+  color:white;
+  }
+  #slideout-menu input{
+      width:85%;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 20px;
+      text-align: center;
+  }
+  
+  section{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+  
+  .section-heading{
+      font-size: 32px;
+      transition: 0.4s;
+      padding: 4px 32px;
+      border-left: 10px solid black ;
+      border-right: 10px solid black ;
+      display: inline-block;
+  }
+  
+  .section-heading:hover{
+      color:red;
+      padding: 4px 48px;
+  }
+  
+   
+  .page-heading{
+    font-size: 32px;
+    transition: 0.4s;
+    padding: 4px 32px;
+    border-left: 10px solid black ;
+    border-right: 10px solid black ;
+    display: inline-block;
+    margin-top:120px;
+}
+
+.page-heading:hover{
+    color:red;
+    padding: 4px 48px;
+}
+
+.pagination{
+text-align: center;
+}
+.active{
+    color:red;
+}
+
+  #section-source{
+      padding:4px 8px;
+      text-align: center;
+  }
+  
+  
+  #section-source a{
+      margin:8px;
+      text-align: center;
+  }
+  
+  
+  
+  .card-image img{
+      height:100%;
+      width:100%;
+  }
+
+  .card{
+        margin: 20px 0;
+    }
+  
+  .card-image{
+      transition:0.4s;
+      width:80%;
+      height:auto;
+  }
+  
+  
+  .card-image:hover{
+      box-shadow: 0px 10px 6px -6px #777;
+  }
+  
+
+
+  .card .card-description{
+      padding: 8px 8px;
+  }
+  
+  .btn-readmore{
+      padding: 8px 24px;
+      border:3px solid black;
+      display: inline;
+      margin: 24px 0 24px 10px;
+      font-weight: blod;
+      background-color: white;
+      cursor: pointer;
+  }
+  
+  .btn-readmore:hover{
+      padding: 8px 64px;
+      color:white;
+      background-color: red;
+      transition:0.4s;
+  }
+  
+  #sidebar{
+    background:#333;
+    flex:1;
+    padding: 8px 16px;
+    color:white;
+    box-shadow: inset 27px 0 51px -18px rgba(0,0,0,0.75);
+  }
+  
+  #post-container{
+    display: flex;
+  }
+
+  #blogpost{
+    display: flex;
+    flex-direction:column;
+    width:70%;
+    border:1px solid #999;
+  }
+
+  #comments-section{
+    border-top: 2px solid #eee;
+    padding:8px;
+  }
+
+  .comments-section{
+    border-top: 2px solid #eee;
+    padding:8px
+}
+
+.comment-form{
+    display:flex;
+    flex-direction: column;
+}
+.comment-form input,
+.comment-form textarea{
+    margin-bottom: 16px;
+}
+.comment-note{
+    text-align: center;
+    color:red;
+}
+#comments-section textarea{
+    height:160px;
+}
+
+.form-submit .submit, .wpcf7, .wpcf7-submit{
+    background: white;
+    font-weight: bold;
+    width:100%;
+    padding:8px;
+    border:2px solid black;
+    height:48px;
+    cursor:pointer;
+    transition:0.4s;
+    box-shadow:initial;
+}
+.form-submit .submit:hover, .wpcf7, .wpcf7-submit:hover{
+    background: red;
+    color: white;
+}
+.comment-reply-title{
+    text-align: center;
+}
+
+.comments{
+    margin-top: 24px;
+}
+
+.all-comments li{
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+.all-comments .comment-meta{
+    background: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-comments .vcard{
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.all-comments .photo{
+    border-right: solid transparent;
+    border-bottom: 4px;
+}
+
+.all-comments .says{
+    display: none;
+}
+
+.all-comments .reply{
+    font-weight: bold;
+}
+
+.all-comments .children{
+    margin-top: 16px;
+}
+  footer{
+      background-color: black;
+      padding:8px;
+      color:#eee;
+      display: flex;
+  }
+  
+  footer a{
+      color:white;
+  }
+  
+  footer a:hover{
+      transition:0.4s;
+      color:red;
+  }
+  
+  footer #left-footer{
+      flex:1;
+      border-right:1px solid red;
+      padding-left:32px;
+  }
+  
+  footer #left-footer ul{
+      padding:0;
+      line-height: 1.5;
+  
+  }
+  
+  footer #right-footer{
+      flex:2;
+      text-align: center;
+  }
+  
+  footer #media-footer a .fa-facebook,
+  footer #media-footer a .fa-youtube,
+  footer #media-footer a .fa-github{
+      color:white;
+      transition:0.4s;
+  }
+  footer #media-footer ul{
+      display: flex;
+      justify-content: center;
+      padding:0;
+      list-style: none;
+  }
+  
+  footer #media-footer ul li{
+      font-size: 48px;
+      transition:0.4s;
+  }
+  
+  footer #media-footer ul li:hover a .fa-github{
+      color:red;
+  }
+  
+ 
+  @media(min-width:720px){
+      main{
+          width:95%;
+      }
+      /* .card{
+          width: 45%;
+      } */
+      .card .card-image img{
+          width:100%;
+      }
+  }
+  @media(min-width:1200px){
+      main{
+          width:85%;
+      }
+  }
+  
+  @media(max-width:900px){
+      nav ul{
+          display: none;
+      }
+      #menu-icon{
+          display: flex;
+      }
+  }
+  
+  @media (max-width:600px){
+      main{
+          width:100%
+      }
+      .card{
+          text-align: center;
+      }
+  }
+  
+  @media(max-width:719px){
+      main{
+          width: 95%;
+      }
+      section{
+          flex-direction: column;
+      }
+      .card,.card .card-image img{
+          padding:8px;
+          width: 100%;
+      }
+  }
