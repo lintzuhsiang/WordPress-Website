@@ -9,7 +9,7 @@
        <?php 
                 $args = array(
                     'post_type'=> 'project',
-                    'posts_per_page' => 3,
+                    'posts_per_page' => 2,
                 );
                 $blogposts = new WP_Query($args);
 
@@ -25,7 +25,7 @@
                </div>
                <div class="card-description">
                    <a href="<?php the_permalink( );?>">
-                       <h3><?php the_title();?></h3>
+                       <h2><?php the_title();?></h2>
                    </a>
                    <div class="card-meta">
                        Posted by <?php the_author();?> on <?php the_time('F j, Y');?> 
@@ -41,9 +41,9 @@
           
        </section>
        
-      <div class="pagination">
-          <?php echo paginate_links( );?>
-      </div>
+       <div class="pagination">
+           <?php echo paginate_links( );?>
+       </div>
 
        <?php get_footer() ?>
   

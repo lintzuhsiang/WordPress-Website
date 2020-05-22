@@ -23,8 +23,7 @@
         </section>
         
         <aside id="sidebar">
-            <h3>SideBar heading</h3>
-            <p>sidebar 1</p>
+           <?php echo dynamic_sidebar('main_sidebar')?>
         </aside>
     <?php
         }

@@ -1,6 +1,6 @@
 <footer>
             <div id="left-footer">
-                <h3>Quick Links</h3>
+                <h2>Quick Links</h2>
                 <ul>
                 <li>
                 <a href="<?php echo site_url('');?>">Home</a>
@@ -34,7 +34,8 @@
         </footer>
 
     </main>
-    <script src="main.js"></script>
     <?php wp_footer(  );?>
+    <script src="js/main.js"></script>
+
 </body>
 </html>

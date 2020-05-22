@@ -19,7 +19,7 @@
                 </div>
                 <div class="card-description">
                     <a href="<?php the_permalink( );?>">
-                        <h3><?php the_title();?></h3>
+                        <h2><?php the_title();?></h2>
                     </a>
                     <div class="card-meta">
                         Posted by <?php the_author();?> on <?php the_time('F j, Y');?> in 

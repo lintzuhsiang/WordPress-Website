@@ -12,24 +12,24 @@
         <ul>
             <li>
                 <a href="<?php echo site_url('');?>" 
-                <?php if(is_front_page(  )) echo 'class="active' ?>
+                <?php if(is_front_page()) echo 'class="active"' ?>
                 >Home</a>
             </li>
             <li>
                 <a href="<?php echo site_url('/blog');?>"
-                <?php if(get_post_type( )=='post') echo 'class="active' ?>
+                <?php if(get_post_type()=='post') echo 'class="active"'?>
                 >Blogs</a>
             </li>
             <li>
                 <a href="<?php echo site_url('/projects');?>"
-                <?php if(get_post_type( )=='project') echo 'class="active' ?>
+                <?php if(is_page('projects')) echo 'class="active"'?>
                 >Projects</a>
 
             </li>
             <li>
-                <a href="<?php echo site_url('/about');?>
-                <?php if(is_page('about')) echo 'class="active' ?>
-                ">About</a>
+                <a href="<?php echo site_url('/about');?>"
+                <?php if(is_page('about')) echo 'class="active"' ?>
+                >About</a>
             </li>
             <div class="searchbox-slide-menu">
                 <?php get_search_form(); ?>
@@ -51,16 +51,24 @@
    
         <ul>
             <li>
-                <a href="<?php echo site_url('');?>">Home</a>
+                <a href="<?php echo site_url('');?>"
+                <?php if(is_front_page()) echo 'class="active"'?>
+                >Home</a>
             </li>
             <li>
-                <a href="<?php echo site_url('/blog');?>">Blogs</a>
+                <a href="<?php echo site_url('/blog');?>"
+                <?php if(get_post_type()=='post') echo 'class="active"'?>
+                >Blogs</a>
             </li>
             <li>
-                <a href="<?php echo site_url('/projects');?>">Projects</a>
+                <a href="<?php echo site_url('/projects');?>"
+                <?php if(is_page('projects')) echo 'class="active"'?>
+                >Projects</a>
             </li>
             <li>
-                <a href="<?php echo site_url('/about');?>">About</a>
+                <a href="<?php echo site_url('/about');?>"
+                <?php if(is_page('about')) echo 'class="active"'?>
+                >About</a>
             </li>
             <li>
                 <div id="search-icon">
@@ -68,7 +76,7 @@
                 </div>
             </li>
         </ul> 
-</nav>
+    </nav>
 
     <div id="searchbox">
         <?php get_search_form(); ?>

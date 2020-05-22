@@ -10,31 +10,33 @@
         <section id="blogpost">
             <div class="card">
 
+                
+                <div class="card-image">
+                    <a href="<?php the_permalink(); ?>">
+                        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="Card Img">
+                    </a>
+                </div>
                 <div class="card-meta-blogpost">
                     Posted by <?php the_author(); ?> on <?php the_time('F j, Y'); ?>
                     <?php if(get_post_type()=='post'){?>
                         in <a href="#"><?php echo get_the_category_list()?></a>
                     <?php } ?>
                 </div>
-                <div class="card-image">
-                    <a href="<?php the_permalink(); ?>">
-                        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="Card Img">
-                    </a>
-                </div>
                 <div class="card-description">
                     <?php the_content() ?>
                 </div>
-
+                </div>
                 <div id="comments-section">
                     <?php 
 
                     $fields = array(
                         'author' => 
-                        '<input placeholder="Name" id="author  type="text"  size="30"/>',
+                        '<input placeholder="Name" id="name"  type="text" value="' . esc_attr( $commenter['comment_author_email']) .'" size="30"' . $aria_req . '/></p>',
+                        // '<input placeholder="Name" id="author  type="text"  size="30"/>',
 
                         'email' =>
                         // '<input placeholder="Email" id="email  type="text"  size="30"/>',
-                        '<input placeholder="Email" id="email  type="text" value="' . esc_attr( $commenter['comment_author_email']) .'" size="30"' . $aria_req . '/></p>',
+                        '<input placeholder="Email" id="email"  type="text" value="' . esc_attr( $commenter['comment_author_email']) .'" size="30"' . $aria_req . '/></p>',
 
                     );
 
@@ -71,15 +73,16 @@
                     ?>
                 </div>
 
-            </div>
+            
         </section>
+
+
+
+        <?php } ?>
+
+        <aside id="sidebar">
+            <?php dynamic_sidebar('main_sidebar')?>
+        </aside>
     </div>
-
-
-<?php } ?>
-
-<aside id="sidebar">
-    <?php dynamic_sidebar('main_sidebar' )?>
-</aside>
 
 <?php get_footer(); ?>

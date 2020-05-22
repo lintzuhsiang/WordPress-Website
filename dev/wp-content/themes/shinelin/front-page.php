@@ -30,7 +30,7 @@
                 </div>
                 <div class="card-description">
                     <a href="<?php the_permalink( );?>">
-                        <h3><?php the_title();?></h3>
+                        <h2><?php the_title();?></h2>
                     </a>
                     <p><?php echo wp_trim_words( get_the_excerpt( ),30 );?></p>
                 </div>
